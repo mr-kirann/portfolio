@@ -1,0 +1,201 @@
+/* Custom Quill Editor Styles for Cyberpunk Theme */
+
+/* Toolbar styling */
+.ql-toolbar {
+  background: rgba(57, 255, 20, 0.05) !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(57, 255, 20, 0.3) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.ql-toolbar .ql-stroke {
+  fill: none !important;
+  stroke: #39ff14 !important;
+}
+
+.ql-toolbar .ql-fill {
+  fill: #39ff14 !important;
+  stroke: none !important;
+}
+
+.ql-toolbar .ql-picker-label {
+  color: #39ff14 !important;
+}
+
+.ql-toolbar .ql-picker-options {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid rgba(57, 255, 20, 0.3) !important;
+  border-radius: 8px !important;
+}
+
+.ql-toolbar .ql-picker-item {
+  color: #ffffff !important;
+}
+
+.ql-toolbar .ql-picker-item:hover {
+  background: rgba(57, 255, 20, 0.1) !important;
+  color: #39ff14 !important;
+}
+
+.ql-toolbar button {
+  color: #39ff14 !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.ql-toolbar button:hover {
+  background: rgba(57, 255, 20, 0.1) !important;
+  transform: translateY(-1px) !important;
+}
+
+.ql-toolbar button.ql-active {
+  background: rgba(57, 255, 20, 0.2) !important;
+  color: #00ffe7 !important;
+}
+
+/* Editor container styling */
+.ql-container {
+  background: rgba(57, 255, 20, 0.05) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+.ql-editor {
+  color: #ffffff !important;
+  min-height: 300px !important;
+  padding: 1.5rem !important;
+  font-family: 'Noto Sans Myanmar', 'Padauk', 'Myanmar3', 'JetBrains Mono', monospace !important;
+  line-height: 1.8 !important;
+  word-spacing: 0.1em !important;
+}
+
+.ql-editor::before {
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-style: italic !important;
+}
+
+/* Content styling */
+.ql-editor h1, .ql-editor h2, .ql-editor h3 {
+  color: #39ff14 !important;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.3) !important;
+}
+
+.ql-editor strong {
+  color: #00ffe7 !important;
+}
+
+.ql-editor em {
+  color: #baffc9 !important;
+}
+
+.ql-editor a {
+  color: #00ffe7 !important;
+  text-decoration: underline !important;
+}
+
+.ql-editor a:hover {
+  color: #39ff14 !important;
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.5) !important;
+}
+
+.ql-editor blockquote {
+  border-left: 4px solid #39ff14 !important;
+  background: rgba(57, 255, 20, 0.05) !important;
+  color: #baffc9 !important;
+  padding: 1rem !important;
+  margin: 1rem 0 !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.ql-editor code {
+  background: rgba(0, 255, 231, 0.1) !important;
+  color: #00ffe7 !important;
+  padding: 0.2rem 0.4rem !important;
+  border-radius: 4px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.ql-editor pre {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(57, 255, 20, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 1rem !important;
+  color: #39ff14 !important;
+  overflow-x: auto !important;
+}
+
+.ql-editor ul, .ql-editor ol {
+  color: #ffffff !important;
+}
+
+.ql-editor li {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Image styling */
+.ql-editor img {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(57, 255, 20, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ql-editor img:hover {
+  transform: scale(1.02) !important;
+  box-shadow: 0 8px 30px rgba(57, 255, 20, 0.3) !important;
+}
+
+/* Scrollbar styling */
+.ql-editor::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.ql-editor::-webkit-scrollbar-track {
+  background: rgba(57, 255, 20, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+.ql-editor::-webkit-scrollbar-thumb {
+  background: rgba(57, 255, 20, 0.3) !important;
+  border-radius: 4px !important;
+}
+
+.ql-editor::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 255, 20, 0.5) !important;
+}
+
+/* Focus states */
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+}
+
+/* Tooltip styling */
+.ql-tooltip {
+  background: rgba(0, 0, 0, 0.9) !important;
+  border: 1px solid rgba(57, 255, 20, 0.3) !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.ql-tooltip input {
+  background: rgba(57, 255, 20, 0.1) !important;
+  border: 1px solid rgba(57, 255, 20, 0.3) !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  padding: 0.5rem !important;
+}
+
+.ql-tooltip a {
+  color: #39ff14 !important;
+}
+
+.ql-tooltip a:hover {
+  color: #00ffe7 !important;
+}

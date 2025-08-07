@@ -1,0 +1,156 @@
+/* Burmese Font Support for Myanmar Text */
+
+/* Define Burmese font families */
+:root {
+  --burmese-font-primary: 'Noto Sans Myanmar', 'Padauk', 'Myanmar3', 'Myanmar Text', sans-serif;
+  --burmese-font-secondary: 'Padauk', 'Noto Sans Myanmar', 'Myanmar3', 'Myanmar Text', sans-serif;
+  --burmese-font-mono: 'Noto Sans Myanmar', 'JetBrains Mono', monospace;
+}
+
+/* Base Burmese text styling */
+.burmese-text {
+  font-family: var(--burmese-font-primary);
+  line-height: 1.8;
+  word-spacing: 0.1em;
+  letter-spacing: 0.02em;
+}
+
+/* Burmese headings */
+.burmese-heading {
+  font-family: var(--burmese-font-primary);
+  font-weight: 600;
+  line-height: 1.4;
+  word-spacing: 0.05em;
+}
+
+/* Burmese paragraph text */
+.burmese-paragraph {
+  font-family: var(--burmese-font-primary);
+  line-height: 1.8;
+  word-spacing: 0.1em;
+  text-align: justify;
+}
+
+/* Burmese code text */
+.burmese-code {
+  font-family: var(--burmese-font-mono);
+  line-height: 1.6;
+}
+
+/* Auto-detect Myanmar Unicode range and apply fonts */
+*:lang(my) {
+  font-family: var(--burmese-font-primary) !important;
+  line-height: 1.8;
+  word-spacing: 0.1em;
+}
+
+/* Unicode range for Myanmar script */
+@supports (font-feature-settings: normal) {
+  /* Myanmar Unicode Block: U+1000–U+109F */
+  *[lang="my"],
+  *[lang="my-MM"] {
+    font-family: var(--burmese-font-primary);
+    font-feature-settings: "liga" 1, "calt" 1;
+    -webkit-font-feature-settings: "liga" 1, "calt" 1;
+    -moz-font-feature-settings: "liga" 1, "calt" 1;
+  }
+}
+
+/* Specific styling for different text sizes */
+.burmese-small {
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+
+.burmese-large {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.burmese-xlarge {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+/* Burmese text in cyberpunk theme */
+.burmese-cyberpunk {
+  font-family: var(--burmese-font-primary);
+  color: #baffc9;
+  text-shadow: 0 0 10px rgba(186, 255, 201, 0.3);
+  line-height: 1.8;
+  word-spacing: 0.1em;
+}
+
+.burmese-cyberpunk-heading {
+  font-family: var(--burmese-font-primary);
+  background: linear-gradient(135deg, #39ff14 0%, #00ffe7 50%, #39ff14 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/* Responsive font sizes for Burmese text */
+@media (max-width: 768px) {
+  .burmese-text {
+    font-size: 0.95em;
+    line-height: 1.9;
+  }
+  
+  .burmese-heading {
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .burmese-text {
+    font-size: 0.9em;
+    line-height: 2.0;
+  }
+}
+
+/* Ensure proper rendering of Myanmar diacritics */
+.myanmar-text {
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
+  -webkit-font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
+  -moz-font-feature-settings: "liga" 1, "clig" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fix for common Myanmar text display issues */
+.myanmar-fix {
+  unicode-bidi: embed;
+  direction: ltr;
+  text-align: left;
+}
+
+/* Burmese text in forms and inputs */
+input.burmese-input,
+textarea.burmese-input {
+  font-family: var(--burmese-font-primary);
+  line-height: 1.6;
+  padding: 0.75rem;
+}
+
+/* Burmese text in ReactQuill editor */
+.ql-editor.burmese-content {
+  font-family: var(--burmese-font-primary) !important;
+  line-height: 1.8 !important;
+  word-spacing: 0.1em !important;
+}
+
+.ql-editor.burmese-content p {
+  font-family: var(--burmese-font-primary) !important;
+  line-height: 1.8 !important;
+}
+
+.ql-editor.burmese-content h1,
+.ql-editor.burmese-content h2,
+.ql-editor.burmese-content h3 {
+  font-family: var(--burmese-font-primary) !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+}
